@@ -9,8 +9,9 @@ let pets = [
   let getAge = (pet) =>Date().getFullYear() - pet.bornOn;
 
   //forEach
-  pets.forEach(pet => pet.age=getAge(pet));
-  console.log(pets);
+  let arr =pets.map(pet => ({...pet, age:getAge(pet)}));
+  console.log(arr);
+  
   
   //filter
   let dogs = pets.filter(pet=>pet.type==="dog")
